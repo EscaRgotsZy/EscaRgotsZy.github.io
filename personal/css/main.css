@@ -1,0 +1,130 @@
+div.section {
+    text-align: center;
+    font-size: 60px;
+}
+#menu{
+    width: 100%;
+    height:30px;
+    position: fixed;
+    left: 0;
+    top:0;
+    background: rgba(255,0,0,0.6);
+    z-index: 999;
+}
+#menu ul{
+    display: flex;
+    justify-content:space-around;
+}
+#menu ul li{
+    float: left;
+    width:100px;
+    line-height:30px;
+}
+#menu ul li a{
+    color: #fff;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+    width:100%;
+    height:100%;
+}
+#menu ul li a.active{
+    background-color: #46a9ff;
+}
+#box4{
+    position: relative;
+}
+.box1 {
+    width: 200px;
+    height: 200px;
+    background: red;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -100px;
+    display: none;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    font-family: "新宋体";
+    color: whitesmoke;
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background:blue;
+    position: absolute;
+    right: 100px;
+    top:50%;
+    margin-top: -100px;
+    display: none;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    font-family: "新宋体";
+    color: whitesmoke;
+
+}
+@keyframes left{
+    0%{
+        transform: translate3d(-300px,0,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+.left{
+    animation: left 1s linear;
+    display:block;
+
+}
+@keyframes right{
+    0%{
+        transform: translate3d(300px,0,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+.right{
+    animation: right 1s linear ;
+    display:block;
+
+}
+@keyframes leftOut {
+     0%{
+         transform: translate3d(0,0,0);
+     }
+     100%{
+         transform: translate3d(-300px,0,0);
+     }
+ }
+.leftOut{
+    animation: leftOut 1s linear forwards;
+    display:block;
+
+}
+@keyframes rightOut {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(300px,0,0);
+    }
+}
+.rightOut{
+    animation: rightOut 1s linear forwards;
+    display:block;
+
+}
+.next {
+    width: 50px;
+    height: 50px;
+    background: #ffd300;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    position: fixed;
+
+}
