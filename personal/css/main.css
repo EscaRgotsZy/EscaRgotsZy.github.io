@@ -1,37 +1,17 @@
-/*=================================
-||			Index 
-==================================*/
-/*
-|	1. Imports [30]
-|	2. Global [37]
-|	3. Colors [92]
-|
-|	=============
-|	SECTIONS
-|	=============
-|	4. Header [112]
-|	5. Our Service [222]
-|	6. About Us [332]
-|	7. Our Works [358]
-|	8. Meet With Us [441]
-|	9. Testimonial [506]
-|	10. Contact With Us [560]
-|	11. Media Query [711]
-|
-|
-|
-|
-|
-*/
-
-
 
 /*=================================
 ||			1. Imports 
 ==================================*/
 @import url(http://fonts.useso.com/css?family=Raleway:400,700,300);
 @import url(http://fonts.useso.com/css?family=Roboto:300,700);
-
+@font-face {
+	font-family: 'iconfont';  /* project id 395548 */
+	src: url('//at.alicdn.com/t/font_395548_k7vq9119wvwvcxr.eot');
+	src: url('//at.alicdn.com/t/font_395548_k7vq9119wvwvcxr.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_395548_k7vq9119wvwvcxr.woff') format('woff'),
+	url('//at.alicdn.com/t/font_395548_k7vq9119wvwvcxr.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_395548_k7vq9119wvwvcxr.svg#iconfont') format('svg');
+}
 
 /*=================================
 ||			2. Global 
