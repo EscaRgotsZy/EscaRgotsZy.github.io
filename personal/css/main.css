@@ -213,7 +213,7 @@ a.logo:hover
 	min-height: 62px;
 }
 /*=================================
-||			5. Our Service 
+||			5. 技能
 ==================================*/
 .service
 {
@@ -323,7 +323,7 @@ a.logo:hover
 }
 
 /*=================================
-||			6. About Us 
+||			6. 关于我
 ==================================*/
 #about .container-fluid .about-table
 {
@@ -349,7 +349,7 @@ a.logo:hover
 }
 
 /*=================================
-||			7. Our Works
+||			7. 作品展示
 ==================================*/
 .works
 {
@@ -437,7 +437,7 @@ button.active, button.filters-button:hover, button.filters-button:active, button
 
 
 /*=================================
-||			10. Contact With Me
+||			10. 与我联系
 ==================================*/
 .contact
 {

@@ -23,9 +23,9 @@
         <div class="btn" id="start">开始</div>
         <div class="btn" id="pause">暂停</div>
         <ul class="phb">
-            <li>第一名 <span></span></li>
-            <li>第二名 <span></span></li>
-            <li>第三名 <span></span></li>
+            <li style="padding-top: 10px;">第一名 <span></span></li>
+            <li style="padding-top: 10px;">第二名 <span></span></li>
+            <li style="padding-top: 10px;">第三名 <span></span></li>
         </ul>
     </div>
 </div>
@@ -34,14 +34,13 @@
     html,body{
         height:100%;
         margin:0;
+
     }
     .main{
         width:1000px;
-        height:100%;
+        height:750px;
         background-color: #ccc;
         margin: 0 auto;
-        background: url("img/M.png") no-repeat;
-        background-size: contain;
         animation:shake linear 1s infinite alternate;
     }
     @keyframes shake {
@@ -57,12 +56,18 @@
         height:100%;
         background: salmon;
         float: left;
+        background: url("img/bg.jpg") no-repeat;
+        background-size: 100%;
     }
     .right{
         width: 200px;
         height:100%;
-        background: rgba(255,68,0,1);
+        background: linear-gradient(#EFE9D9, #DFD5BA);
         float: left;
+        /*background: url("img/right.jpg") no-repeat;*/
+        /*background-size: cover;*/
+        /*background-position: center;*/
+
 
     }
     .show{
@@ -111,7 +116,7 @@
         transform:scale(1.1,1.1)
     }
     .letter {
-        background: violet;
+        /*background: violet;*/
         width: 80px;
         height: 80px;
         /*border: 1px solid red;*/
@@ -120,6 +125,8 @@
         position: absolute;
         font-size: 30px;
         font-weight: bold;
+        font-family: "HelveticaNeueLT Pro 23 UltLtEx";
+        background-image: url("img/22.png");
         background-position: center;
         background-size: 100%;
         border-radius: 50%;
@@ -180,7 +187,7 @@
 //            console.log(this.obj)
             newdiv.style.left=randomLeft+"px";
             newdiv.style.top=randomTop+"px";
-            newdiv.style.backgroundImage=`url("img/${randomLetter}.jpg")`;
+            newdiv.innerHTML=randomLetter;
 //            newdiv.style.background=`url(image/${randomLetter}.png)`;
             console.log(newdiv)
             this.left.appendChild(newdiv);

@@ -196,3 +196,17 @@ $(function() {
         }
     });
 });
+var windowScroll=document.documentElement.scrollTop==0?document.body:document.documentElement;
+
+$(window).scroll(function () {
+    var rt=windowScroll.scrollTop;
+    console.log(rt)
+    var ot=$("#works").offset().top;
+    console.log(ot)
+    var top=ot-rt;
+    // console.log(top)
+    if (top<=500){
+        $("#works_container").addClass("animated rotateIn");
+    }
+    // $("#works_container").removeClass("animated shake")
+})
