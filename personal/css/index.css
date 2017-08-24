@@ -1,18 +1,50 @@
-.Welcome{
+/*.Welcome{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*background: orange;*/
+    /*position: fixed;*/
+    /*z-index: 2;*/
+/*}*/
+/*.Welcome-main{*/
+    /*font-weight: 400;*/
+    /*padding: 25px 0px;*/
+    /*!*background: #221e2d;*!*/
+    /*color: #ddd;*/
+    /*text-transform: uppercase;*/
+    /*min-height: 92px;*/
+    /*top: 90px;*/
+/*}*/
+
+#menu{
     width: 100%;
-    height: auto;
-    background: orange;
+    height:40px;
     position: fixed;
-    z-index: 2;
+    left: 0;
+    top:0;
+    background: rgb(15, 15, 15);
+    opacity: 0.8;
+    z-index: 999;
 }
-.Welcome-main{
-    font-weight: 400;
-    padding: 25px 0px;
-    /*background: #221e2d;*/
-    color: #ddd;
-    text-transform: uppercase;
-    min-height: 92px;
-    top: 90px;
+#menu ul{
+    display: flex;
+    justify-content:space-around;
+}
+#menu ul li{
+    float: left;
+    width:100px;
+    line-height:40px;
+}
+#menu ul li a{
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    text-decoration: none;
+    display: block;
+    width:100%;
+    height:100%;
+}
+#menu ul li a.active{
+    background-color: #46a9ff;
 }
 header{
     width: 100%;
@@ -23,7 +55,43 @@ header{
     position: relative;
     /*background: yellow;*/
 }
+.next {
+    width: 36px;
+    height: 82px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-image: url(../img/button_downr.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 
+}
+.scaleN{
+    transform: scale(1.2);
+    transition: all 1s linear;
+}
+.scaleS{
+    transform: scale(1);
+    transition: all 1s linear;
+}
+.menuNone{
+    display: none;
+}
+.menuBlock {
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    /*background: blue;*/
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.menuBlock a{
+    color: white;
+}
 .zhezhao {
     width: 100%;
     height: 100%;
@@ -36,7 +104,7 @@ header{
     /*background: blue;*/
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 45%;
 }
 .head-title h1 a{
     font-family: 'Montserrat', sans-serif;
@@ -50,7 +118,7 @@ header{
     /*transform: rotate(-20deg);*/
 }
 /*.head-title h1 a:hover{*/
-    /*text-decoration:underline;*/
+/*text-decoration:underline;*/
 /*}*/
 .head-title span{
     color:white;
@@ -62,6 +130,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 
 }
 .chat li{
@@ -76,9 +145,13 @@ header{
     color: white;
     font-weight: 400;
 }
-
+/*banner结束*/
 
 .container{
+    padding-top:80px;
+    padding-bottom: 47px;
+}
+.abuts{
     padding-top:80px;
     padding-bottom: 47px;
 }
@@ -93,6 +166,7 @@ header{
 .section-left{
     /*background: blue;*/
     padding: 0 15px;
+    float: left;
 }
 .section-right{
     padding: 0 15px;
@@ -112,6 +186,9 @@ h5 {
     font-size: 16px;
     color: #5b4c5c;
     padding-bottom: 20px;
+}
+.rightt{
+    float: right;
 }
 .abouts p {
     font-size: 14px;
@@ -134,7 +211,7 @@ h5 {
 .btn-lg, .btn-group-lg>.btn {
     padding: 10px 16px;
 }
-section img {
+.section-right img {
     padding: 7px;
     display: block;
     border: 1px solid #bab4bb;
@@ -142,19 +219,24 @@ section img {
 .skill{
     width: 100%;
 }
+#skillst{
+    padding-top: 39px;
+    padding-bottom: 39px;
+}
 .skillset {
     background: #f8f8f8;
     display: table;
     width: 100%;
 }
 .skillset .container {
-    padding-top: 66px;
+    padding-top: 120px;
     padding-bottom: 64px;
 }
 .skilltitle{
     width: 100%;
     text-align: center;
     padding-bottom: 70px;
+    padding-top: 66px;
 }
 .skillset h4 {
     font-size: 16px;
@@ -181,7 +263,7 @@ section img {
     width: 76px;
     height: 2px;
     background: #5b4c5c;
-   margin:0 auto;
+    margin:0 auto;
 }
 .skilltitle h3 {
     font-size: 18px;
@@ -233,9 +315,16 @@ section img {
     letter-spacing: 2px;
     color: #5b4c5c;
 }
+.jdt-l{
+    float: left;
+}
+.jdt-r{
+    float: right;
+}
 .port{
     padding: 0;
     margin: 0 auto;
+    float: left;
 }
 .port li{
     display: block;
@@ -249,13 +338,12 @@ section img {
     width: 100%;
     height: 100%;
 }
-
 .email{
     text-align: center;
 }
 /*.e-main{*/
-    /*display: inline-block;*/
-    /*text-align: center;*/
+/*display: inline-block;*/
+/*text-align: center;*/
 /*}*/
 .table{
     width: 100%;
@@ -297,8 +385,10 @@ section img {
 }
 .touch{
     padding: 20px;
+    float: left;
     /* box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1) */
 }
+
 .touch ul{
     padding: 20px;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
@@ -401,10 +491,11 @@ section img {
 /* LATEST BLOGS 结束 */
 /* 版权开始 */
 .copy{
+    margin-top: 100px;
     width: 100%;
     height: auto;
     background: black;
-    padding: 70px;
+    padding: 37px;
 }
 .copy ul{
     width: 100%;
@@ -433,11 +524,11 @@ section img {
 /* 版权结束 */
 @font-face {
     font-family: 'iconfont';  /* project id 383007 */
-    src: url('//at.alicdn.com/t/font_383007_cs1y0pkx3c0ltyb9.eot');
-    src: url('//at.alicdn.com/t/font_383007_cs1y0pkx3c0ltyb9.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_383007_cs1y0pkx3c0ltyb9.woff') format('woff'),
-    url('//at.alicdn.com/t/font_383007_cs1y0pkx3c0ltyb9.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_383007_cs1y0pkx3c0ltyb9.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_383007_vvmkt30tyoljif6r.eot');
+    src: url('//at.alicdn.com/t/font_383007_vvmkt30tyoljif6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_383007_vvmkt30tyoljif6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_383007_vvmkt30tyoljif6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_383007_vvmkt30tyoljif6r.svg#iconfont') format('svg');
 }
 .copy ul>li>a{
     font-family: iconfont;

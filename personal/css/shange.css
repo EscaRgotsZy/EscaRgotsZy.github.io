@@ -31,7 +31,7 @@
 }
 /* 属性选择器 */
 [class*='col-']{
-	float: left;
+	/*float: left;*/
 	padding: 0 15px;
 }
 

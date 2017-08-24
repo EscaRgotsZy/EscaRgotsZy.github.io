@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<style>
+    body{
+        color: whitesmoke;
+    }
+    .weather{
+        width: 800px;
+        height: 600px;
+        background: linear-gradient(#19345B,#578EB9);
+        margin:  0 auto;
+        position: relative;
+        border-radius: 10px;
+    }
+    .time{
+        border:;
+        width: 100%;
+        height: 40px;
+        /*background: #c1c1c1;*/
+        margin: 0 auto;
+        /*text-align: center;*/
+        line-height: 40px;
+    }
+    .time p{
+        float: left;
+    }
+    .xuanze{
+        float: right;
+    }
+    .content {
+        width: 100%;
+        height: 260px;
+        /*background: yellowgreen;*/
+    }
+    .left{
+        width: 200px;
+        height: 100%;
+        /*background: coral;*/
+        float: left;
+    }
+    .left>ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .left>ul>li{
+        display: block;
+        width: 86px;
+        height: 33.333%;
+        /*background: darkgrey;*/
+    }
+    .left>ul>li:nth-child(2){
+        /*background: whitesmoke;*/
+        width: 100%;
+    }
+    .left>ul>li:nth-child(3){
+        width: 100%;
+    }
+    .left>ul>li>img{
+        width: 100%;
+        height: 100%;
+    }
+    #dushu{
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 48px;
+        line-height: 84px;
+        display: inline-block;
+        font-family: Arial;
+        text-shadow: 1px 1px 1px #555
+    }
+    .sheshidu{
+        display: inline-block;
+        /*margin-left: 30px;*/
+        /*font-size: 48px;*/
+        /*line-height: 84px;*/
+    }
+    #tianqi{
+        font-size: 14px;
+    }
+    #zhuangtai p{
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+    }
+    .right{
+        float: right;
+        width: 600px;
+        height: 100%;
+        /*background: orange;*/
+    }
+    .right>ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .right>ul>li{
+        width: 85px;
+        /*background: blue;*/
+        height: 100%;
+        float: left;
+        border-left: 1px solid #416389;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 12px;
+    }
+    .top{
+        padding-top: 35px;
+        width: 100%;
+        height: 66.66%;
+    }
+    .top>p{
+        padding: 6px 0;
+    }
+    .bottom{
+        width: 100%;
+        height: 33.33%;
+    }
+    .bottom>p{
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+    }
+    .weat{
+        width: 50px;
+        height: 300px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .weat>ul>li{
+        text-align: center;
+        padding: 17px 0;
+        font-size: 12px;
+    }
+    canvas{
+        background: #578EB8;
+    }
+    .shijian{
+        width: 700px;
+        margin-left: 50px;
+    }
+    .shijian>ul>li{
+        float: left;
+        width: 77.5px;
+        height: 20px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <div class="weather">
+        <div class="time"><p>08月16日 周四 农历六月廿六</p>
+            <div class="xuanze">
+                选择省<select name="province" id="provinces"></select>
+                选择市<select name="city" id="citys"></select>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li  id="imgs">
+                        <img src="天气图标/weathercn/1.png" alt="">
+                    </li>
+                    <li>
+                        <span id="dushu">28</span>
+                        <span class="sheshidu">
+                            <p>℃</p>
+                            <a href="###" id="tianqi">多云(实时)</a>
+                        </span>
+                    </li>
+                    <li id="zhuangtai">
+                        <p>18~30℃</p>
+                        <p>无风</p>
+                        <p>无持续风向微风</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul id="day">
+                    <li id="0">
+                        <div class="top">
+                            <p id="week">周日</p>
+                            <p id="dt">08月13日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="1">
+                        <div class="top">
+                            <p id="week">周一</p>
+                            <p id="dt">08月14日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="2">
+                        <div class="top">
+                            <p id="week">周二</p>
+                            <p id="dt">08月15日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="3">
+                        <div class="top">
+                            <p id="week">周三</p>
+                            <p id="dt">08月16日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="4">
+                        <div class="top">
+                            <p id="week">周四</p>
+                            <p id="dt">08月17日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="5">
+                        <div class="top">
+                            <p id="week">周五</p>
+                            <p id="dt">08月18日</p>
+                            <div id="tq">
+                                <img src="8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                    <li id="6">
+                        <div class="top">
+                            <p id="week">周六</p>
+                            <p id="dt">08月19日</p>
+                            <div id="tq">
+                                <img src="5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p id="wd">19~30℃</p>
+                            <p id="wz">阵雨</p>
+                            <p id="fx">无持续风向微风</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="weather-canvas">
+            <div class="weat">
+                <ul id="wnd">
+                    <li>37</li>
+                    <li>31</li>
+                    <li>25</li>
+                    <li>19</li>
+                    <li>13</li>
+                </ul>
+            </div>
+            <canvas width="700px" height="250px"></canvas>
+        </div>
+        <div class="shijian">
+            <ul id="now">
+                <li>现在</li>
+                <li>02点</li>
+                <li>05点</li>
+                <li>08点</li>
+                <li>11点</li>
+                <li>14点</li>
+                <li>17点</li>
+                <li>20点</li>
+                <li>23点</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+    //    e52897c0710fce5c
+    //http://api.jisuapi.com/area/province?appkey=yourappkey
+    var provinces=[];
+    var citys=[];
+    var data=[];
+    var arr=[];
+    var tempp=[];
+//    console.log(arr)
+    var canvas=document.querySelector("canvas")
+    $.ajax({
+        url:"http://api.jisuapi.com/weather/city?appkey=e52897c0710fce5c",
+        dataType:"jsonp",
+        success:function (r) {
+            data=r.result;
+            provinces=$.grep(r.result,function (value) {
+                if(value.parentid==="0"){
+                    return true;
+                }
+            })
+            $.each(provinces,function (index,value) {
+                $("<option>").html(value.city).val(value.cityid).appendTo("#provinces");
+            })
+        }
+    });
+    $("#provinces").on("change blur load",function () {
+        var id=$(this).val();
+        citys=$.grep(data,function (value) {
+            if(value.parentid===id){
+                return true;
+            }
+        })
+
+        $("#citys").empty();
+        $.each(citys,function (index,value) {
+            $("<option>").html(value.city).val(value.city).appendTo("#citys");
+        })
+    })
+    $("#citys").on("change blur load",function () {
+        var city=$(this).val();
+        $.ajax({
+            url:"http://api.jisuapi.com/weather/query?appkey=e52897c0710fce5c&city="+city,
+            dataType:"jsonp",
+            success:function (r) {
+                dushu=r.result.temp;
+//                console.log(r.result.daily[0].day.weather);
+                $("#dushu").html(dushu);
+                $("#tianqi").html(`${r.result.daily[0].day.weather}(实时)`);
+                $("#imgs").html(`<img src="天气图标/weathercn/${r.result.img}.png" alt="">`);
+                $("#zhuangtai>p:first-child").html(`${r.result.templow}~${r.result.temphigh}℃`);
+                $("#zhuangtai>p:nth-child(2)").html(`${r.result.winddirect}`);
+                $("#day>li").each(function (index,value) {
+                    var val=index;
+                    $(this).find(".top #week").html(r.result.daily[val].week);
+                    $(this).find(".top #dt").html(r.result.daily[val].date);
+                    $(this).find(".top #tq").html(`<img src="天气图标/weathercn/${r.result.daily[val].day.img}.png" alt="">`);
+                    $(this).find(".bottom #wd").html(`${r.result.daily[val].night.templow}~${r.result.daily[val].day.temphigh}℃`);
+                    $(this).find(".bottom #wz").html(r.result.daily[val].day.weather);
+                    $(this).find(".bottom #fx").html(r.result.daily[val].day.winddirect+r.result.daily[val].day.windpower);
+                });
+                for(var i=0;i<24;i++){
+                    if (i%3==0){
+                        $("#now li").eq(i/3).html(r.result.hourly[i].time);
+//                        console.log(r)
+                        var x=i/3*77.7777+38.8888;
+                        var y=(43-parseInt(r.result.hourly[i].temp))/6*50;
+                        arr.push({x,y});
+                        tempp.push(r.result.hourly[i].temp);
+
+                    }
+                    if (i==23){
+                        $("#now li").eq(8).html(r.result.hourly[0].time);
+//                        var x=i/3*77.7777+38.8888;
+                          var y=(43-(r.result.hourly[0].temp))/6*50;
+//                      arr.push({x,y})
+                        tempp.push(r.result.hourly[0].temp);
+
+                    }
+                }
+                drawTemp();
+                function drawTemp() {
+                    var cobj=canvas.getContext("2d");
+                    cobj.strokeStyle="#5181AB";
+                    cobj.lineWidth=1;
+                    for (let i=1;i<=5;i++){
+                        cobj.moveTo(0, 50*i);
+                        cobj.lineTo(700,50*i);
+                        if (i==5){
+                            cobj.moveTo(0, 249);
+                            cobj.lineTo(700,249);
+                        }
+                    }
+                    cobj.stroke();
+                    cobj.strokeStyle="#A2BED5";
+                    cobj.lineWidth=1;
+                    for (let i=0;i<=8;i++){
+                        cobj.beginPath();
+                        cobj.font='14px Arial';
+                        cobj.fillStyle="white"
+                        cobj.fillText(`${tempp[i]}℃`,(arr[i].x)-10,(arr[i].y)-10)
+                        cobj.moveTo(arr[i].x,arr[i].y);
+                        cobj.lineTo(arr[i+1].x,arr[i+1].y);
+                        cobj.stroke();
+                    }
+                }
+
+            }
+        })
+    })
+
+//获取当前ip地址
+//    $.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",function(){
+//        var city=remote_ip_info.city;
+//
+//    });
+</script>
+</html>

@@ -1,0 +1,592 @@
+/*顶部开始*/
+header{
+    width: 100%;
+    height: 50px;
+    background: black;
+}
+.header-top{
+    width: 1170px;
+    height: 50px;
+    background: black;
+    margin: 0 auto;
+}
+.topRight{
+    float: right;
+    color: whitesmoke;
+    line-height: 50px;
+    text-align: left;
+}
+.topRight  span,.topLeft  span{
+    padding: 0 5px;
+}
+.topLeft{
+    float: right;
+    padding-right: 5px;
+    /*background: red;*/
+    color: whitesmoke;
+    line-height: 50px;
+    text-align: left;
+}
+/*顶部结束*/
+
+/*导航开始*/
+nav{
+    background: white;
+}
+.nav-main{
+    width: 1170px;
+    height: 110px;
+    /*background: blue;*/
+    margin: 0 auto;
+    padding:30px 0;
+}
+.nav-left{
+
+}
+.nav-leftl {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.nav-rightr{
+    margin-left: 15px;
+    width: 258px;
+    height: 100%;
+    /*background: yellow;*/
+    float: left;
+}
+.nav-right{
+    float: left;
+    height: 50px;
+    padding-left: 20px;
+}
+.nav-right>ul>li{
+    text-align: center;
+    display: block;
+    width: 100px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    padding: 0 10px;
+}
+.nav-right>ul>li>a{
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+#active {
+    background: #FB4542;
+}
+#activea{
+    color: white;
+}
+/*导航结束*/
+
+/*banner开始*/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 630px;
+    background: red;
+}
+.banner-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.banner-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner-box>li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-box>li>img{
+    width: 100%;
+    height: 100%;
+}
+.banner-font {
+    text-align: right;
+    position: absolute;
+    width: 536px;
+    height: 200px;
+    margin: auto;
+    top: 130px;
+    left: 0;
+    right: 0;
+    /*background: indianred;*/
+}
+.banner-font>ul{
+    width: 100%;
+    height: 100%;
+}
+.banner-font>ul>li{
+    margin-top: 20px;
+}
+.banner-font>ul>li:first-child{
+    color: rgb(249, 216, 62);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei';
+}
+.banner-font>ul>li:nth-child(2){
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei';
+    color: rgb(255, 255, 255);
+}
+.banner-font>ul>li:last-child{
+    float: right;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background: yellow;
+    line-height: 40px;
+
+}
+.circle{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 120px;
+    width: 100px;
+    height: 20px;
+    /*background: red;*/
+}
+.circle>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.circle>ul>li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #cccbbb;
+    border-radius: 50%;
+}
+/*banner结束*/
+/*内容开始*/
+.section {
+    width: 100%;
+    background: black;
+}
+.section-container {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(34, 38, 41);
+    width: 1170px;
+    height: 630px;
+}
+.section-top{
+    /*background: red;*/
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.section-top>a{
+    font-family: Microsoft YaHei;
+    font-size: 16px;
+    opacity: 0.9;
+    font-weight: normal;
+    width: 291px;
+    height: 70px;
+    background: white;
+    float: left;
+    line-height: 70px;
+    text-align: center;
+    color: black;
+}
+#activeS{
+    color: white;
+    background: #FB4542;
+}
+.padd{
+    width: 100%;
+    height: 100px;
+}
+.section-main {
+    width: 100%;
+    height: 430px;
+    background-color: rgb(34, 38, 41);
+}
+.smain-left{
+    float: left;
+    width: 570px;
+    height: 100%;
+    background: #2B2F33;
+}
+.smain-ll{
+    width: 270px;
+    height: 430px;
+    float: left;
+}
+.smain-rr{
+    width: 300px;
+    height: 430px;
+    float: right;
+    padding: 30px 29px 0 29px;
+}
+.smain-rr .title{
+    color: rgb(255, 255, 255);
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+}
+.smain-rr p{
+    font-size: 12px;
+}
+.titlec{
+    color: rgb(90, 90, 90);
+    font-size: 12px;
+    line-height: 240%;
+    padding-bottom: 40px;
+}
+.smain-rr a {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 80px;
+    display: block;
+    width: 110px;
+    height: 30px;
+    background: #E84441;
+}
+.smain-right{
+    float: right;
+    width: 570px;
+    height: 430px;
+    /*background: yellow;*/
+}
+.smain-right>ul {
+    width: 100%;
+    height: 100%;
+}
+.smain-right>ul>li{
+    width: 570px;
+    height: 200px;
+    background: blue;
+}
+.smain-right>ul>li:last-child{
+    margin-top: 30px;
+}
+.leftli{
+    float: left;
+    width: 370px;
+    height: 200px;
+    background: violet;
+}
+.rightli{
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+    float: right;
+    width: 200px;
+    height: 200px;
+    background: #FC4548;
+}
+.li-top{
+    font-size: 18px;
+    text-align: center;
+}
+.rightli>a {
+    color: white;
+    margin: 0 auto;
+    display: block;
+    width: 104px;
+    height: 30px;
+    border: 1px solid #FD8D8F;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    line-height: 30px;
+}
+/*主营开始*/
+.zhuying{
+    margin: 0 auto;
+    width: 1170px;
+    height:824px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 70px;
+    position: relative;
+}
+.zhuying-title {
+    width: 140px;
+    height: 33px;
+    /*background: red;*/
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 33px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(21, 36, 55);
+}
+.wuyong{
+    width: 100%;
+    height: 10px;
+}
+.title-tiao{
+    margin-top: 10px;
+    width: 200px;
+    height: 3px;
+    margin: 0 auto;
+}
+.title-tiao img{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.title-nav{
+    width: 663px;
+    height: 42px;
+    /*background: red;*/
+    margin: 0 auto;
+
+}
+.title-nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.title-nav>ul>li {
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 42px;
+    /*background: yellowgreen;*/
+    float: left;
+    width: 160px;
+    height: 42px;
+}
+.title-nav>ul>li>a{
+    color: black;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+}
+#activeN{
+    background: #FB4542;
+    border: none;
+}
+.zhuying-img{
+    width: 1170px;
+    height: 406px;
+    /*background: blue;*/
+}
+.zhuying-img>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.zhuying-img>ul>li{
+    width: 270px;
+    height: 406px;
+    /*background: violet;*/
+    float: left;
+}
+.zy-bottom{
+    height: 36px;
+    width: 100%;
+
+}
+.zy-bottom>p>a{
+    font-size: 14px;
+}
+.zy-bottom>p{
+    text-align: center;
+}
+.more{
+    width: 1170px;
+    height: 40px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+}
+/*主营结束*/
+/*关于我们开始*/
+.AboutsUs{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("../img/sbj_ojuj.jpg");
+}
+.about-us {
+    margin: 0 auto;
+    width: 1170px;
+    height: 70px;
+    background:white;
+    position: relative;
+}
+.us-top{
+    color: rgb(153, 153, 153);
+    width: 1170px;
+    height: 100px;
+    background: white;
+    position: absolute;
+    top: -100px;
+    padding-top: 20px;
+    padding-left: 30px;
+
+}
+.us-title{
+    padding-bottom: 5px;
+    font-size: 22px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(51, 51, 51);
+}
+.us-top>a{
+    font-size: 12px;
+}
+.xiahua:hover{
+    text-decoration: underline;
+}
+.aboutMain{
+    width: 1100px;height: 70px;
+    padding: 10px 0 10px 30px;
+
+}
+.abmain{
+    width: 1110px;
+    height: 50px;
+    display: flex;
+    background-color: rgb(246, 246, 246);
+    justify-content: flex-start;
+}
+.abmain>a{
+    border-right: 1px solid white;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background: rgb(246, 246, 246);
+    line-height: 50px;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+    color: black;
+}
+.Abouts-main{
+    width: 100%;
+    background: white;
+    padding-top: 30px;
+    height: 1000px;
+
+}
+.maino{
+    width:1170px;
+    /*height: 200px;*/
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.about-img{
+    width: 1110px;
+    height: 420px;
+}
+.about-font{
+    height: 378px;
+    width: 1110px;
+    padding-top: 60px;
+}
+/*关于我们结束*/
+/*callwe开始*/
+.callWeTop{
+    width: 100%;
+    height: 300px;
+    background: white;
+}
+.newsmore{
+    width: 1170px;
+    height: 40px;
+    background: #E3E2E2;
+    text-align: center;
+    line-height: 40px;
+    color: rgba(153,153,153,1);
+    font-family: Microsoft YaHei;
+    font-size: 12px;
+    margin: 0 auto;
+}
+.callWemain{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(246, 246, 246);
+    position: relative;
+}
+.callWemain>ul {
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: white;
+    position: absolute;
+    top: -60px;
+    width: 1170px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.callWemain>ul>li{
+    height: 130px;
+    width: 370px;
+    background: black;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.callWemain>ul>li:first-child{
+    background-color: rgb(43, 47, 51);
+}
+.callWemain>ul>li:nth-child(2){
+    background-color: rgb(251, 69, 66);
+}
+
+.call-us{
+    width: 261px;
+    height: 32px;
+    /*background: blue;*/
+    /*padding-top: 40px;*/
+}
+.callus-img{
+    width: 31px;
+    height: 31px;
+    float: left;
+}
+.callus-img>img{
+    width: 100%;
+    height: 100%;
+}
+/*callwe结束*/
+/*内容结束*/
+/*尾部开始*/
+footer{
+    width: 100%;
+    height: 70px;
+    background: black;
+}
+.foot {
+    margin: 0 auto;
+    width: 1170px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(116, 119, 121);
+    font-size: 12px;
+}
+/*尾部结束*/
+@font-face {
+    font-family: 'iconfont';  /* project id 393260 */
+    src: url('//at.alicdn.com/t/font_393260_8llmugrf61dcxr.eot');
+    src: url('//at.alicdn.com/t/font_393260_8llmugrf61dcxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_393260_8llmugrf61dcxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_393260_8llmugrf61dcxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_393260_8llmugrf61dcxr.svg#iconfont') format('svg');
+}

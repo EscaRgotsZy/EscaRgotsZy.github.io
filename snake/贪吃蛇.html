@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .snake{
+        width: 700px;
+        height: 500px;
+        /*background: #4EF485;*/
+        margin: 0 auto;
+        position: relative;
+
+    }
+    .gongju{
+        width: 200px;
+        height: 500px;
+        background: tan;
+        float: right;
+        z-index: 1;
+    }
+    .scene {
+        width: 500px;
+        height: 500px;
+        /*border: 1px solid blue;*/
+        float: left;
+        background: wheat;
+        position: relative;
+        /*margin: 0 auto;*/
+    }
+
+    .block {
+        width: 25px;
+        height: 25px;
+        box-sizing: border-box;
+        /*border: 1px solid #a4a4a4;*/
+        border-radius:50%;
+        float: left;
+    }
+
+    .snackbody {
+        background: green;
+        background-image: url("6.jpg");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .snackhead {
+        /*background: red;*/
+        background-image: url("4.jpg");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .food {
+        /*background:blue;*/
+        background-image: url("7.jpg");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .img img{
+        width: 100%;
+        height: 100%;
+    }
+    .loading {
+        border-radius: 10px;
+        border: 1px solid white;
+        width: 110px;
+        height: 40px;
+        background: #0F4354;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bengin{
+        background:#46BBAC ;
+        border-radius: 5px;
+        border: 1px solid white;
+        width: 99px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        font-family: "宋体";
+        font-weight: bold;
+    }
+    .yc{
+        display: none;
+    }
+
+    #go{
+        margin: 0 auto;
+    }
+    h1{
+        line-height: 40px;
+        text-align: center;
+        /*line-height: 300px;*/
+        font-size: 28px;
+        font-size: 20px;
+        color: white;
+    }
+    .gongju>ul{
+        width: 100%;
+        height: 100%;
+        /*display: flex;*/
+        /*align-items: stretch;*/
+    }
+    .gongju>ul>li{
+        border-radius: 10px;
+        margin-left:10px;
+        width:100px;
+        height: 40px;
+        background: #0F4354;
+        margin-top: 93px;
+        list-style: none;
+
+    }
+    .jieshu {
+        width: 150px;
+        height: 163px;
+        background: red;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin:  auto;
+        border-radius: 10px;
+    }
+    .jieshu>ul>li {
+        margin-top: 20px;
+        list-style: none;
+    }
+    .xians{
+        display: block;
+    }
+    .ycc{
+        display: none;
+    }
+    .xuanzhuant{
+        transform: rotate(-90deg);
+    }
+    .xuanzhuanb{
+        transform: rotate(90deg);
+    }
+    .xuanzhuanl{
+        transform: rotate(-180deg);
+    }
+    .xuanzhuanr{
+        transform: rotate(0deg);
+    }
+</style>
+<body>
+<div class="snake">
+    <div class="img" style="z-index: 2"><img src="2.gif" alt=""></div>
+    <div class="loading" style="z-index: 3">
+        <div class="bengin">开始游戏</div></div>
+    <div class="scene">
+        <div class="jieshu yc">
+            <ul>
+                <li>游戏结束</li>
+                <li><input type="submit" value="重新开始" id="chongxin"></li>
+                <li><input type="submit" value="返回首页" id="fanhui"></li>
+            </ul>
+
+
+        </div>
+    </div>
+    <div class="gongju">
+        <ul>
+            <li>
+                <h1 class="fen">分数：0</h1>
+            </li>
+            <li>
+                <h1 class="time">时间：0s</h1>
+            </li>
+            <li>
+                <h1 class="kaishi" style="cursor: pointer">开始游戏</h1>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+    $(".bengin").click(function () {
+        $(".img,.loading").addClass("yc")
+    })
+    $(".kaishi").click(function () {
+        snake();
+        fun();
+    })
+
+
+    $("#fanhui").click(function () {
+        location.reload();
+    })
+    function cx() {
+        $(".scene div").addClass("ycc")
+    }
+    $("#chongxin").click(function () {
+        cx();
+        snake();
+        fun();
+
+
+    })
+
+
+    let sj=0
+    function fun() {
+        let tm=setInterval(function () {
+            sj++;
+            $(".time").html(`时间：${sj}s`)
+        },1000)
+    }
+
+    function snake() {
+
+
+        for (var i=0; i < 20; i++) {
+            for (var j=0; j < 20; j++) {
+                $("<div></div>").addClass("block").attr("id", j + "-" + i).appendTo(".scene");
+            }
+        }
+        var snackArr=[{x: 0, y: 0}, {x: 1, y: 0}, {x: 2, y: 0}];
+        var snackHead=snackArr[snackArr.length - 1];
+        function drawSnack() {
+            $(".snackbody").removeClass("snackbody");
+            $(".snackhead").removeClass("snackhead");
+            $.each(snackArr, function (index, value) {
+                $("#" + value.x + "-" + value.y).addClass("snackbody");
+            });
+            $("#" + snackHead.x + "-" + snackHead.y).addClass("snackhead");
+            switch (dir){
+                case "r":
+                    $("#"+snackHead.x+"-"+snackHead.y).addClass("xuanzhuanr");
+
+                    break;
+                case "l":
+                    $("#"+snackHead.x+"-"+snackHead.y).addClass("xuanzhuanl");
+
+                    break;
+                case "t":
+                    $("#"+snackHead.x+"-"+snackHead.y).addClass("xuanzhuant");
+                    break;
+                case "b":
+                    $("#"+snackHead.x+"-"+snackHead.y).addClass("xuanzhuanb");
+                    break;
+            }
+        }
+        drawSnack();
+        var dir="r";
+        function move() {
+            switch (dir) {
+                case "r":
+                    snackHead={x: snackHead.x + 1, y: snackHead.y};
+
+                    break;
+                case "l":
+                    snackHead={x: snackHead.x - 1, y: snackHead.y};
+
+                    break;
+                case "t":
+                    snackHead={x: snackHead.x, y: snackHead.y - 1};
+                    break;
+                case "b":
+                    snackHead={x: snackHead.x, y: snackHead.y + 1};
+                    break;
+            }
+            function end() {
+                $(".scene div").removeClass("yc")
+            }
+            snackArr.push(snackHead);
+            var head=$("#"+snackHead.x+"-"+snackHead.y);
+            if(head.hasClass("snackbody")||head.length===0){
+                end();
+                clearInterval(tm);
+
+            }
+
+            if(head.hasClass("food")){
+                head.removeClass("food");
+                createFood();
+                let fen=$('.fen');
+                fen.html(`分数：${len}`)
+                if (len>2){
+                    sp-=1;
+                }
+            }else{
+                snackArr.shift();
+            }
+            drawSnack();
+        }
+        let sp=4;
+        setInterval(move, sp*100);
+        $(document).keydown(function (e) {
+            switch (e.keyCode) {
+                case 65:
+                case 37:
+                    dir="l";
+                    break;
+                case 87:
+                case 38:
+                    dir="t";
+                    break;
+                case 68:
+                case 39:
+                    dir="r";
+                    break;
+                case 83:
+                case 40:
+                    dir="b";
+                    break;
+            }
+        });
+        let len=-1;
+        function createFood() {
+            len++;
+            do {
+                var rx=Math.floor(Math.random() * 20);
+                var ry=Math.floor(Math.random() * 20);
+            }while($("#"+rx+"-"+ry).hasClass("snackbody"));
+            $("#"+rx+"-"+ry).addClass("food");
+        }
+        createFood();
+    }
+
+</script>
+</html>
