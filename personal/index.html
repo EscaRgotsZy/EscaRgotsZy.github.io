@@ -1,306 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/star.png" type="favicon/ico" />
-    <title>Title</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/shange.css">
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/star.png" type="favicon/ico" />
 
-</head>
-<body>
-<!--头部开始-->
-<div class="section  Welcome">
-    <div class="menuBlock" id="nav-Block"><a href="###" style="font-family: iconfont">&#xe63c;</a></div>
-    <header class="container-fluid">
-        <div class="zhezhao"></div>
-        <div class="head-title">
-            <h1><a href="">Hey，I'm ZhangYue</a>
-            </h1>
-            <span style="font-weight: bold">Design &amp; Build Beautiful Crafted Web Experiences</span><br>
-            <ul class="chat">
-                <li><a href=""><i>&#xe8bf;</i></a></li>
-                <li><a href=""><i>&#xe60c;</i></a></li>
-                <li><a href=""><i>&#xe63b;</i></a></li>
-                <li><a href=""><i>&#xe622;</i></a></li>
-            </ul>
-            <div class="next"></div>
-        </div>
-    </header>
-    <div id="menu" class="menuNone">
-        <ul>
-            <li><a href="#p1" data-menuanchor="p1">Home</a></li>
-            <li><a href="#p2" data-menuanchor="p2">ABOUT&nbsp;ME</a></li>
-            <li><a href="#p3" data-menuanchor="p3">Skills</a></li>
-            <li><a href="#p4" data-menuanchor="p4">Portfolio</a></li>
-            <li><a href="#p5" data-menuanchor="p5">E-Mail</a></li>
-            <li id="nav-None"><a href="javascript:;" style="font-family: iconfont">&#xe612;</a></li>
-        </ul>
-    </div>
+    <title>PERSONAL</title>
 
-</div>
-<!--头部结束-->
-<!--内容开始-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" href="nivo-lightbox/nivo-lightbox-theme.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    <div id="personal">
-        <!--关于我开始-->
-        <div class="section">
-            <div class="abouts">
+  </head>
+  <body>
+
+    <!--== 4. Header ==-->
+
+        <section class="header" id="header">
+            <div class="navigationbar  navbar-fixed-top">
                 <div class="container">
-                    <div class="row abuts">
-                        <div class="col-md-12" style="width: 100%">
-                            <div class="skilltitle">
-                                <h2>ABOUT&nbsp;ME</h2>
-                                <div class="gang"></div>
-                                <h3>A small introduction about my self</h3>
-                            </div>
-                        </div>
+                    <a href="#" class="logo">
+                        欢迎来到我的个人主页
+                       <!--WELLCOME <i class="fa fa-star-o star"></i>-->
+                    </a>
+                    <i class="fa fa-bars pull-right" id="iconhideshow"></i>
+                    <ul class="nav hide nav-pills pull-right">
+                      <li role="presentation"><a href="#header">首页</a></li>
+                      <li role="presentation"><a href="#service">技能</a></li>
+                      <li role="presentation"><a href="#about">关于我</a></li>
+                      <li role="presentation"><a href="#works">项目展示</a></li>
+                      <li role="presentation"><a href="#contact">与我联系</a></li>
+                      <li role="presentation"><a href="#contact"></a></li>
+                      <li role="presentation"><a href="#contact"></a></li>
+                    </ul>
+                </div> <!-- /.container -->
+            </div> <!-- /.navigation-bar -->
+            <div class="header-description text-center">
+                <div class="header-content wow bounce animated">
+                    <h1 class="heading">Hey，I'm ZhangYue</h1>
+                    <p class="heading-subtitle">
+                        Design &amp; Build Beautiful Crafted Web Experiences
+                    </p> 
+                </div> <!-- /.header-content -->   
+            
+                <div class="wow zoomIn button-down" data-wow-duration="1s" data-wow-offset="100">
+                  <div class="wow tada" data-wow-delay="1s" data-wow-duration="1s">
+                    <div class="wow rubberBand" data-wow-delay="2000ms" data-wow-duration="1s">
+                      <div class="wow pulse" data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s">
+                        <a href="#service" title="Go down">
+                          <img src="images/button_downr.png" alt="MaterialUp" class="center">
+                        </a>
+                      </div>
                     </div>
+                  </div>
+                </div>
+            </div> <!-- /.header-description -->
+        </section> <!-- /#header -->
 
-                    <div class="row">
-                        <div class="section-right col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <img src="img/jhon-img.jpg" alt="">
-                        </div>
-                        <div class="section-left col-lg-7 col-md-7 col-sm-7 col-xs-12 textct">
-                            <h5>Mr.Zhang</h5>
-                            <h4>Webdesigner &amp; Web Developer from Melbourne</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                            <p><a role="button" class="btn btn-primary btn-lg">Download Printable Resume</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--关于我结束-->
-        <div class="skillset section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 skll" style="width: 100%">
-                        <div class="skilltitle">
-                            <h2>Skills &amp; Expertice</h2>
-                            <div class="gang"></div>
-                            <h3>I can say i’m quite good at</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 jdt-l">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
-                                mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis noss nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 jdt-r">
-                            <div class="skill-jindu">
-                                <div class="jindu" style="width: 0%"></div>
-                                <div class="jindu-title">
-                                    <div class="jindu-zileft">Web design
-                                    </div>
-                                    <div class="jindu-ziright" style="margin-right: 74%">94%</div>
+    <!--== 5. 技能 ==-->
 
-                                </div>
-                            </div>
-                            <div class="skill-jindu">
-                                <div class="jindu" style="width: 0%"></div>
-                                <div class="jindu-title">
-                                    <div class="jindu-zileft">HTML/CSS
-                                    </div>
-                                    <div class="jindu-ziright" style="margin-right: 14%">86%</div>
-                                </div>
-                            </div>
-                            <div class="skill-jindu">
-                                <div class="jindu" style="width: 88%"></div>
-                                <div class="jindu-title">
-                                    <div class="jindu-zileft">JavaScript
-                                    </div>
-                                    <div class="jindu-ziright" style="margin-right: 12%">88%</div>
-                                </div>
-                            </div>
-                            <div class="skill-jindu">
-                                <div class="jindu" style="width: 76%"></div>
-                                <div class="jindu-title">
-                                    <div class="jindu-zileft">jQuery
-                                    </div>
-                                    <div class="jindu-ziright" style="margin-right: 24%">76%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--PORTFOLIOa开始-->
-        <div class="section">
-            <div class="slide">3-1
-                <div class="container" id="skillst">
+        <section class="service" id="service">
+            <div class="wrapper">
+                <div class="container">
+                    <h2 class="section-title wow bounceInRight animated custom-white">我的技能</h2>
+                </div> <!-- /.container -->
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12" style="width: 100%">
-                            <div class="skilltitle" style="padding-bottom: 0">
-                                <h2>Portfolio</h2>
-                                <div class="gang"></div>
-                                <h3>What I have done in my academic career</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <div class="service-content">
+                            <div class="container-fluid border-3">
+                                <div class="container border-2">
+                                    <div class="row">
+                                        <div class="col-sm-5 border-1">
+                                            <h4 class="subtitle custom-purple wow bounceInLeft center animated">What can i do?</h4>
+                                        </div>
+                                        <div class="col-sm-7"></div>
+                                    </div> <!-- /.row -->
+                                </div> <!-- /.container -->
+                            </div> <!-- /.container-fluid -->
+                            <div class="container border-2">
+                                <div class="row .service-table">
+                                    <div class="col-sm-5 border-1 custom-purple .service-table-cell">
+                                        <p class="service-main-content wow pulse animated">
+                                            Lorem ipsum dolor sit amet, cadipiscing elit. Nullam dolor risus, efficitur ac ultricies quis, imperdiet sit amet nulla. dignissim mi insaer purus blandit, eget.
+                                        </p>
+                                        <p class="service-main-content wow pulse animated">
+                                            Lorem ipsum dolor sit amet, cadipiscing elit. Nullam dolor risus, efficitur ac ultricies quis, imperdiet sit amet nulla.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-7 .service-table-cell">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-center">
+                                                <a href="#">
+                                                    <div class="add wow bounceInRight animated" data-wow-delay=".6s">
+                                                        <!--<i class="fa fa-android"></i>-->
+                                                        <p style="font-size: 20px; border-radius: 10px;display: block">
+                                                            HTML<br>CSS
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                                <div class="demo">
+                                                    <div class="demo-4 wow flip animated" data-percent="90"></div>
+                                                </div>
+                                                <p class="custom-red text-center">
+                                                    90<br>Completed
+                                                </p>
+                                            </div> <!-- /.col-sm-4 -->
+                                            <div class="col-sm-4 text-center">
+                                                <a href="#">
+                                                    <div class="add wow bounceInRight animated" data-wow-delay="0.4s">
+                                                        <!--<i class="fa fa-apple"></i>-->
+                                                        <p>
+                                                            PHP<br>Ajax
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                                <div class="demo">
+                                                    <div class="demo-4 wow flip animated" data-percent="75"></div>
+                                                </div>
+                                                <p class="custom-red text-center">
+                                                    75<br>Completed
+                                                </p>
+                                            </div> <!-- /.col-sm-4 -->
+                                            <div class="col-sm-4 text-center">
+                                                <a href="#">
+                                                    <div class="add wow bounceInRight animated" data-wow-delay="0.2s">
+                                                        <!--<i class="fa fa-bullseye"></i>-->
+                                                        <p>
+                                                            JavaScript<br>JQuery
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                                <div class="demo">
+                                                    <div class="demo-4 wow flip animated" data-percent="85"></div>
+                                                </div>
+                                                <p class="custom-red text-center">
+                                                    85<br>Completed
+                                                </p>
+                                            </div> <!-- /.col-sm-4 -->
+                                        </div> <!-- /.row -->
+                                    </div> <!-- /.col-sm-7 -->
+                                </div> <!-- /.row -->
+                            </div> <!-- /.container -->
+                            <div class="container-fluid border-4">
+                                <div class="container border-2">
+                                    <div class="row">
+                                        <div class="col-sm-5 border-1 empty"></div>
+                                        <div class="col-sm-7 empty"></div>
+                                    </div> <!-- /.row -->
+                                </div> <!-- /.container -->
+                            </div> <!-- /.container-fluid -->
+                        </div> <!-- /.service-content -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container-fluid -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#service -->
+    
+    <!--== 6. 关于我 ==-->
+    
+        <section id="about" class="about">
+            <div class="container-fluid">
                 <div class="row">
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/2.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/3.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/4.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/5.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/6.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/7.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/8.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="slide">3-2
-                <div class="container" id="skillst">
-                    <div class="row">
-                        <div class="col-md-12" style="width: 100%">
-                            <div class="skilltitle" style="padding-bottom: 0">
-                                <h2>Portfolio</h2>
-                                <div class="gang"></div>
-                                <h3>What I have done in my academic career</h3>
-                            </div>
+                    <div class="about-table">
+                         <div class="col-md-7 col-sm-12 about-table-cell">
+                            <div class="about-content">
+                                <div class="wrapper">
+                                    <h2 class="section-title wow bounceInRight animated">about me</h2>
+                                    <h4 class="section-paragraph wow pulse animated" style="font-size: 16px;">Mr.Zhang</h4>
+                                    <p class="section-paragraph wow pulse animated">
+                                        主要从事前端工作,非常精通HTML/CSS JavaScript jQuery框架等,做过电商类网站,也做过企业类网站,会做固定宽高的网站,也会做响应式网站,还会移动端的,我非常熟悉JavaScript中对于Document操作,利用操作Document文档对象可以对HTML进行检查、修改以及增加内容,利用JavaScript更好的去丰富页面,增强交互效果。同时我也非常熟悉jQuery框架利用它可以去更好的处理兼容性,简化代码。
+                                    </p> <!-- /.section-paragraph -->
+                                </div> <!-- /.wrapper --> 
+                            </div> <!-- /.about-content -->
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/1.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/2.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/3.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/4.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/5.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/6.jpg" alt="">
-                        </li>
-                    </ul>
-                    <ul class="col-lg-3 col-md-3 col-sm-6 col-xs-12 port">
-                        <li>
-                            <img src="img/7.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/8.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                        <div class="col-md-4 col-sm-12 about-table-cell" style="background:url(images/part_3_bg.jpg);background-size:cover;">
+                        </div>
+                    </div> <!-- /.about-table -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container-fluid -->
+        </section> <!-- /#about -->
+    
+    <!--== 7. 项目展示 ==-->
 
-        </div>
-        <!--PORTFOLIO结束-->
-        <!--e-mail开始-->
-        <div class="section">
-        <div class="email container">
-            <div class="row">
-                <div class="col-md-12" style="width: 100%">
-                    <div class="skilltitle">
-                        <h2>Drop a email</h2>
-                        <div class="gang"></div>
-                        <h3>Please feel free if you would like to have a chat.</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="touch col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-                    <ul>
-                        <li>
-                            <i class="iconfont">&#xe628;</i>
-                            <span>Phone</span>
-                            <p>+1 (123) 456-7890</p>
-                        </li>
-                        <li>
-                            <i class="iconfont">&#xe73f;</i>
-                            <span>EMAIL</span>
-                            <p>domain@gmail.com</p>
-                        </li>
-                        <li>
-                            <i class="iconfont">&#xe734;</i>
-                            <span>ADDRESS</span>
-                            <p>A902, Crosswinds Apt, Western Road,<br>
-                                Brighton, East Sussex, Bath
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="touch col-lg-7 col-md-7 col-sm-12 col-xs-12 em">
-                    <input type="text" name="name" placeholder="Your Name*">
-                    <input type="text" name="name" placeholder="Your Email*">
-                    <div class="office">
-                            <textarea name="massage" id="" cols="30" rows="10" placeholder="Your Massage*">
-                            </textarea>
-                        <div class="plane">
-                            <i class="iconfont">&#xe602;</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div class="copy">
-                <ul>
-                    <li>
-                        <a href="" class="iconfont">&#xe60c; </a>
-                    </li>
-                    <li>
-                        <a href="" class="iconfont">&#xe8bf; </a>
-                    </li>
-                    <li>
-                        <a href="" class="iconfont">&#xe601; </a>
-                    </li>
-                    <li>
-                        <a href="" class="iconfont">&#xe60d; </a>
-                    </li>
-                </ul>
-                <p>Copyright © 2017.Company name All rights reserved.</p>
-            </div>
-        </div>
-        <!--e-mail结束-->
-        <div class="section"></div>
-        <!-- 版权 开始-->
-    </div>
-<!--内容结束-->
-</body>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery.fullpage.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/index.js"></script>
+        <section id="works" class="works">
+            <div class="wrapper">
+                <div class="container">
+                <h2 class="section-title wow bounceInRight animated custom-white" style="text-align: center;">项目展示</h2>
+                </div> <!-- /.container -->
+				<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+
+                <div id="works_container">
+                    <div class="works-single-item applications illustration web" style="height: 364px;">
+                        <img class="works-item" src="images/1.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href="images/1.jpg"><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                               天猫临摹
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                    <div class="works-single-item music" style="height: 364px;">
+                    <img class="works-item" src="images/2.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href="images/2.jpg"><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                                小米临摹
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                    <div class="works-single-item applications" style="height: 364px;">
+                    <img class="works-item" src="images/3.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href=""><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                                企业网站
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                    <div class="works-single-item music print" style="height: 364px;">
+                    <img class="works-item" src="images/4.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href=""><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                                 天气预报
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                    <div class="works-single-item applications logo" style="height: 364px;">
+                    <img class="works-item" src="images/5.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href="images/5.jpg"><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                                TODOList
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                    <div class="works-single-item web" style="height: 364px;">
+                    <img class="works-item" src="images/6.jpg">
+                        <div class="works-single-item-hover text-center">
+                            <div class="works-icons">
+                                <a href="#"><i class="custom-icon fa fa-link"></i></a>
+                                <a class="portfolio-item" data-lightbox-gallery="our-works-item-view" href=""><i class="custom-icon fa fa-search"></i></a>
+                            </div>
+                            <div class="works-icons-content">
+                                打字游戏
+                            </div>
+                        </div> <!-- /.works-single-item-hover -->
+                    </div> <!-- /.works-single-item -->
+                </div> <!-- /#container -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#works -->
+
+
+    <!--== 10. Contact With Us ==-->
+
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <div class="wrapper">
+                    <div class="container">
+                        <h2 class="section-title wow bounceInRight animated custom-black" style="text-align: center;color: white">与我联系</h2>
+                        <div class="row">
+                            <div class="col-sm-6 clearfix">
+                                <p class="address wow pulse animated">
+                                    House-3 Road-2, Akhalia Ghate R/A, Sylhet <br>
+                                    <strong>Call: </strong>18434351025 <br>
+                                    <strong>E-mail: </strong>18434351025@163.com <br>
+                                    <strong>Web: </strong><a href="#">www.themewagon.com</a>
+                                </p>
+                                <ul class="social-icons text-center">
+                                    <li class="wow animated fadeInLeft facebook animated">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="wow animated fadeInRight twitter animated">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li class="wow animated fadeInLeft linkedin animated">
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                    <li class="wow animated fadeInRight googleplus animated">
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li class="wow animated fadeInLeft github animated">
+                                        <a href="#"><i class="fa fa-github"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <form class="_form-inline row" id="contact-form" name="contact" method="post" action="contact.php">
+                                    <div class="form-group custom-form-group col-sm-6">
+                                        <label class="sr-only" for="name" id="name"><span class="required">*</span>Name</label>
+                                        <input type="text" class="form-control custom-form-control wow bounceInLeft animated" name="name" id="name" placeholder="Enter your name" required>
+                                    </div>
+                                    
+                                    <div class="form-group custom-form-group col-sm-6">
+                                        <label class="sr-only" for="email" id="email"><span class="required">*</span>Email</label>
+                                        <input type="email" class="form-control custom-form-control wow bounceInRight animated" id="email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form-group custom-form-group col-sm-12">
+                                        <label class="sr-only" for="text-massage"><span class="required">*</span>Massage</label>
+                                        <textarea  class="form-control custom-form-control wow bounceInUp animated" id="text-massage" name="text-massage" rows="3" placeholder="Write something" required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="pull-right btn btn-default submit-button custom-white wow bounceInLeft animated" id="submit" name="submit" value="Send">发送</button>
+                                </form>
+                                <div id="success">
+                                    <span>
+                                        <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+                                    </span>
+                                </div>
+
+                                <div id="error">
+                                    <span>
+                                        <p>Something went wrong, try refreshing and submitting the form again.</p>
+                                     </span>
+                                </div>
+                            </div> 
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div> <!-- /.wrapper -->
+                <footer class="custom-red text-center wow flip animated">
+                    &copy; 2015 </strong>More Templates <a href="" target="_blank" title="个人主页">个人主页
+                </footer>
+            </div> <!-- /.contact-content -->
+        </section> <!-- /#contact -->
+        <a href="#header" id="back-to-top" class="top"><i class="fa fa-chevron-up"></i></a>
+    
+        
+
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.circlechart.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="nivo-lightbox/nivo-lightbox.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
 </html>
